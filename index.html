@@ -10,16 +10,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #f5f0e8;
-  --surface: #ede7da;
-  --surface2: #e4dccb;
-  --surface3: #d9d0be;
-  --burgundy: #6b1f2a;
-  --burgundy-dim: rgba(107,31,42,0.08);
-  --rose: #c4727a;
-  --rose-light: #e8b4b8;
-  --butter: #e8a0a8;
-  --butter-dim: rgba(232,160,168,0.15);
+  --bg: #FFFAE4;
+  --surface: #f5f0d0;
+  --surface2: #ede8c4;
+  --surface3: #e4dfb8;
+  --burgundy: #6D1437;
+  --burgundy-dim: rgba(109,20,55,0.08);
+  --rose: #d4789a;
+  --rose-light: #FFEBF8;
+  --butter: #FFEBF8;
+  --butter-dim: rgba(255,235,248,0.6);
   --text: #2c1f1f;
   --muted: #9a8878;
   --muted2: #7a6a5a;
@@ -71,16 +71,16 @@ main { padding: 18px 16px 0; }
 .section-lbl { font-size: .65rem; color: var(--muted); letter-spacing: 2.5px; text-transform: uppercase; margin: 20px 0 8px 2px; display: flex; align-items: center; gap: 8px; }
 .section-lbl::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-.warmup-card { background: var(--butter-dim); border: 1px solid rgba(196,114,122,.25); border-radius: var(--radius); margin-bottom: 7px; }
+.warmup-card { background: var(--butter-dim); border: 1px solid rgba(255,180,220,.35); border-radius: var(--radius); margin-bottom: 7px; }
 .warmup-top { display: flex; align-items: center; padding: 10px 13px; gap: 10px; cursor: pointer; user-select: none; }
-.warmup-check { width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid rgba(196,114,122,.4); background: none; flex-shrink: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; transition: all .15s; }
-.warmup-card.done .warmup-check { background: var(--rose-light); border-color: var(--rose-light); }
+.warmup-check { width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid rgba(109,20,55,.25); background: none; flex-shrink: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; transition: all .15s; }
+.warmup-card.done .warmup-check { background: var(--rose-light); border-color: var(--rose); }
 .warmup-check .wcheck-icon { display: none; }
 .warmup-card.done .warmup-check .wcheck-icon { display: block; }
 .warmup-name { font-size: .83rem; color: var(--muted2); flex: 1; }
 .warmup-card.done .warmup-name { text-decoration: line-through; color: var(--muted); }
 
-.ex-card { background: #f0eeea; border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 8px; overflow: hidden; transition: border-color .2s, opacity .2s; }
+.ex-card { background: #f7f5ee; border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 8px; overflow: hidden; transition: border-color .2s, opacity .2s; }
 .ex-card.done { border-color: var(--rose-light); opacity: .55; }
 .ex-top { display: flex; align-items: center; padding: 12px 14px; gap: 10px; cursor: pointer; user-select: none; }
 .check-btn { width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid var(--border-dark); background: none; flex-shrink: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; transition: all .15s; }
