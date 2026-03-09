@@ -18,8 +18,8 @@
   --burgundy-dim: rgba(107,31,42,0.08);
   --rose: #c4727a;
   --rose-light: #e8b4b8;
-  --butter: #e8c84a;
-  --butter-dim: rgba(232,200,74,0.18);
+  --butter: #e8a0a8;
+  --butter-dim: rgba(232,160,168,0.15);
   --text: #2c1f1f;
   --muted: #9a8878;
   --muted2: #7a6a5a;
@@ -46,8 +46,7 @@ header {
   padding: 16px 18px 0;
 }
 .header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
-.logo { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 400; font-style: italic; color: var(--burgundy); line-height: 1; }
-.logo span { font-style: normal; font-weight: 300; color: var(--muted2); font-size: .85rem; display: block; letter-spacing: 3px; text-transform: uppercase; margin-top: 2px; }
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 400; font-style: italic; color: var(--burgundy); line-height: 1; }
 
 .timer-block { display: flex; align-items: center; gap: 8px; }
 .timer-display { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; color: var(--muted); transition: color .3s; min-width: 68px; text-align: right; letter-spacing: 1px; }
@@ -55,9 +54,9 @@ header {
 .timer-btn { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--border-dark); background: var(--surface); color: var(--burgundy); font-size: .85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .15s; flex-shrink: 0; }
 .timer-btn.active { background: var(--burgundy); border-color: var(--burgundy); color: var(--bg); }
 
-.workout-row { display: flex; gap: 6px; margin-bottom: 10px; align-items: center; }
-.workout-btn { font-size: .7rem; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border-dark); background: var(--surface); color: var(--muted2); cursor: pointer; transition: all .15s; }
-.workout-btn.active { background: var(--burgundy); color: var(--bg); border-color: var(--burgundy); }
+.workout-row { display: flex; gap: 0; margin-bottom: 10px; align-items: center; border-bottom: 1px solid var(--border); }
+.workout-btn { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; letter-spacing: .5px; padding: 6px 14px 8px; border: none; border-bottom: 2px solid transparent; background: none; color: var(--muted); cursor: pointer; transition: all .15s; margin-bottom: -1px; }
+.workout-btn.active { color: var(--burgundy); border-bottom-color: var(--burgundy); }
 .edit-btn-small { margin-left: auto; font-size: .67rem; letter-spacing: 1px; text-transform: uppercase; padding: 5px 10px; border-radius: 20px; border: 1px solid var(--border-dark); background: none; color: var(--muted2); cursor: pointer; white-space: nowrap; }
 
 .prog-bar-wrap { height: 2px; background: var(--border); }
@@ -67,26 +66,25 @@ header {
 main { padding: 18px 16px 0; }
 .workout-view { display: none; }
 .workout-view.active { display: block; }
-.workout-title { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; font-style: italic; color: var(--burgundy); line-height: 1; }
-.workout-sub { font-size: .68rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-top: 3px; margin-bottom: 20px; }
+.workout-heading { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; font-style: italic; color: var(--burgundy); line-height: 1; margin-bottom: 4px; }
 
 .section-lbl { font-size: .65rem; color: var(--muted); letter-spacing: 2.5px; text-transform: uppercase; margin: 20px 0 8px 2px; display: flex; align-items: center; gap: 8px; }
 .section-lbl::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-.warmup-card { background: var(--butter-dim); border: 1px solid rgba(232,200,74,.35); border-radius: var(--radius); margin-bottom: 7px; }
+.warmup-card { background: var(--butter-dim); border: 1px solid rgba(196,114,122,.25); border-radius: var(--radius); margin-bottom: 7px; }
 .warmup-top { display: flex; align-items: center; padding: 10px 13px; gap: 10px; cursor: pointer; user-select: none; }
-.warmup-check { width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid rgba(200,170,50,.5); background: none; flex-shrink: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; transition: all .15s; }
-.warmup-card.done .warmup-check { background: var(--butter); border-color: var(--butter); }
+.warmup-check { width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid rgba(196,114,122,.4); background: none; flex-shrink: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; transition: all .15s; }
+.warmup-card.done .warmup-check { background: var(--rose-light); border-color: var(--rose-light); }
 .warmup-check .wcheck-icon { display: none; }
 .warmup-card.done .warmup-check .wcheck-icon { display: block; }
 .warmup-name { font-size: .83rem; color: var(--muted2); flex: 1; }
 .warmup-card.done .warmup-name { text-decoration: line-through; color: var(--muted); }
 
-.ex-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 8px; overflow: hidden; transition: border-color .2s, opacity .2s; }
+.ex-card { background: #f0eeea; border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 8px; overflow: hidden; transition: border-color .2s, opacity .2s; }
 .ex-card.done { border-color: var(--rose-light); opacity: .55; }
 .ex-top { display: flex; align-items: center; padding: 12px 14px; gap: 10px; cursor: pointer; user-select: none; }
 .check-btn { width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid var(--border-dark); background: none; flex-shrink: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; transition: all .15s; }
-.ex-card.done .check-btn { background: var(--rose); border-color: var(--rose); }
+.ex-card.done .check-btn { background: var(--rose-light); border-color: var(--rose-light); }
 .check-icon { display: none; }
 .ex-card.done .check-icon { display: block; }
 .ex-info { flex: 1; min-width: 0; }
@@ -140,7 +138,7 @@ main { padding: 18px 16px 0; }
 <body>
 <header>
   <div class="header-row">
-    <div class="logo">sunday gym<span>workout tracker</span></div>
+    <div class="logo">let's work out</div>
     <div class="timer-block">
       <div class="timer-display" id="timerDisplay">00:00</div>
       <button class="timer-btn" id="timerBtn" onclick="toggleTimer()">▶</button>
@@ -149,22 +147,18 @@ main { padding: 18px 16px 0; }
   <div class="workout-row">
     <button class="workout-btn active" onclick="setWorkout(0)">Workout 1</button>
     <button class="workout-btn" onclick="setWorkout(1)">Workout 2</button>
-    <button class="edit-btn-small" onclick="openEdit()">✏ aanpassen</button>
+    <button class="edit-btn-small" onclick="openEdit()">edit</button>
   </div>
   <div class="prog-bar-wrap"><div class="prog-bar" id="progBar"></div></div>
   <div class="prog-lbl" id="progLbl"></div>
 </header>
 <main>
   <div class="workout-view active" id="w0">
-    <div class="workout-title">Workout 1</div>
-    <div class="workout-sub">Benen · Rug · Schouders</div>
     <div class="section-lbl">Warming up</div><div id="wu0"></div>
     <div class="section-lbl">Training</div><div id="ex0"></div>
     <button class="reset-btn" onclick="resetWorkout(0)">↺ reset &amp; sla op als vorige sessie</button>
   </div>
   <div class="workout-view" id="w1">
-    <div class="workout-title">Workout 2</div>
-    <div class="workout-sub">Benen · Rug · Schouders · Armen</div>
     <div class="section-lbl">Warming up</div><div id="wu1"></div>
     <div class="section-lbl">Training</div><div id="ex1"></div>
     <button class="reset-btn" onclick="resetWorkout(1)">↺ reset &amp; sla op als vorige sessie</button>
@@ -296,7 +290,16 @@ function onWC(inp){
   sess[key].weights[setIdx]=inp.value;saveSess(wIdx,sess);updateProgress();
 }
 
-function renderAll(){schema.workouts.forEach((_,i)=>{renderWarmup(`wu${i}`,i);renderExercises(`ex${i}`,i);});updateProgress();}
+function renderAll(){
+  schema.workouts.forEach((_,i)=>{
+    // inject title at top of each view
+    const view=document.getElementById(`w${i}`);
+    let titleEl=view.querySelector('.workout-heading');
+    if(!titleEl){titleEl=document.createElement('div');titleEl.className='workout-heading';view.insertBefore(titleEl,view.firstChild);}
+    titleEl.textContent=schema.workouts[i].name.toLowerCase();
+    renderWarmup(`wu${i}`,i);renderExercises(`ex${i}`,i);
+  });updateProgress();
+}
 
 function updateProgress(){
   const w=currentWorkout;const sess=loadSess(w,0);
